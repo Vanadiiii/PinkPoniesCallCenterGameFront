@@ -1,5 +1,10 @@
 import { Injectable } from '@angular/core';
 
+export interface Score {
+  score: string,
+  money: string
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -59,7 +64,7 @@ export class UserService {
     ]
   }
 
-  public getScore() {
+  public getScore(): Score {
     return {
       score: '2500',
       money: '100',

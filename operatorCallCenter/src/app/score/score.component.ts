@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Score, UserService } from '../user.service';
 
 @Component({
   selector: 'app-score',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScoreComponent implements OnInit {
 
-  constructor() { }
+  score: Score = this.userService.getScore();
+
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
   }

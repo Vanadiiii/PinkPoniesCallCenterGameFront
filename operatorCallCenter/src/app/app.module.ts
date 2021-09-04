@@ -21,14 +21,22 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
+
 
 import {Routes, RouterModule} from '@angular/router';
 import { AchievementsComponent } from './achievements/achievements.component';
 import { ScoreComponent } from './score/score.component';
+import { SoonAchievementComponent } from './soon-achievement/soon-achievement.component';
+import { AdminComponent } from './admin/admin.component';
+import { TableForAdminComponent } from './table-for-admin/table-for-admin.component';
 
 const appRoutes: Routes =[
   { path: '', component: EnterPageComponent},
   { path: 'main', component: MainComponent},
+  { path: 'admin', component: AdminComponent },
   { path: '**', redirectTo: '' }
 ];
 
@@ -42,6 +50,9 @@ const appRoutes: Routes =[
     LevelComponent,
     AchievementsComponent,
     ScoreComponent,
+    SoonAchievementComponent,
+    AdminComponent,
+    TableForAdminComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,7 +69,10 @@ const appRoutes: Routes =[
     MatCardModule,
     MatGridListModule,
     MatTabsModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatDividerModule,
+    MatListModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
