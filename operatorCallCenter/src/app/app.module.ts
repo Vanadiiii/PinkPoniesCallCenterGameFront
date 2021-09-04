@@ -32,12 +32,14 @@ import { ScoreComponent } from './score/score.component';
 import { SoonAchievementComponent } from './soon-achievement/soon-achievement.component';
 import { AdminComponent } from './admin/admin.component';
 import { TableForAdminComponent } from './table-for-admin/table-for-admin.component';
+import { ShopComponent } from './shop/shop.component';
 
 const appRoutes: Routes =[
   { path: '', component: EnterPageComponent},
   { path: 'main', component: MainComponent},
   { path: 'admin', component: AdminComponent },
-  { path: '**', redirectTo: '' }
+  { path: 'shop', component: ShopComponent },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
@@ -53,6 +55,7 @@ const appRoutes: Routes =[
     SoonAchievementComponent,
     AdminComponent,
     TableForAdminComponent,
+    ShopComponent,
   ],
   imports: [
     BrowserModule,

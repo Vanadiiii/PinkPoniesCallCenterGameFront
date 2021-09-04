@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
 
 
     this.router.events.subscribe((item: any) => {
-      if(item.url?.includes('main')) {
+      if(item.url?.includes('main') || item.url?.includes('shop')) {
         this.user = 'user';
       } else if (item.url?.includes('admin')) {
         this.user = 'admin';

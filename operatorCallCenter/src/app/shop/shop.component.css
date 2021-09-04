@@ -1,0 +1,14 @@
+.shop {
+    display: flex;
+    justify-content: row;
+    flex-wrap: wrap;
+}
+
+.shop__card {
+    width: 250px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 10px;
+}
