@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  user = '';
+
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+
+
+    this.router.events.subscribe((item: any) => {
+      if(item.url?.includes('main')) {
+        this.user = 'user';
+      } else if (item.url?.includes('admin')) {
+        this.user = 'admin';
+      } else if (item.url) {
+        this.user = '';
+      }
+    })
+  }
+
+  exit() {
+    this.router.navigateByUrl('/');
   }
 
 }

@@ -1,0 +1,19 @@
+.header {
+    width: 100%;
+    height: 75px;
+    background-color: #3f51b5;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header__name {
+    margin-top: 27px;
+    color: white;
+}
+
+.header__button {
+    height: 40px;
+    margin-top: 17px;
+    margin-right: 25px;
+    margin-left: 15px;
+}

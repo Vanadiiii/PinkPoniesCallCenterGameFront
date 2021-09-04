@@ -1,1 +1,4 @@
-<p>header works!</p>
+<div class="header" *ngIf="user">
+    <p class="header__name">{{user}}</p>
+    <button class="header__button" (click)="exit()" mat-raised-button>Выйти</button>
+</div>
