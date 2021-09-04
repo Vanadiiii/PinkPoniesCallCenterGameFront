@@ -1,0 +1,14 @@
+<div class="achievements">
+    <p class="achievements__header">Достижения</p>
+    <div class="achievements__container">
+        <mat-card class="achievements__card" *ngFor="let achievement of achievements">
+            <mat-card-title-group>
+                <mat-card-title>{{achievement.name}}</mat-card-title>
+                <img mat-card-sm-image src={{achievement.img}}>
+            </mat-card-title-group>
+            <mat-card-content>
+                {{achievement.description}}
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

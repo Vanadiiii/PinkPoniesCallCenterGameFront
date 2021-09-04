@@ -1,0 +1,22 @@
+.achievements__card {
+    max-width: 300px;
+    min-width: 300px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.achievements__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.achievements {
+    width: 100%;
+    min-width: 300px;
+}
+
+.achievements__header {
+    text-align: center;
+    font-size: 30px;
+}

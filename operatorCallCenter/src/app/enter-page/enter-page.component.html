@@ -1,0 +1,15 @@
+<form #myForm="ngForm" (ngSubmit)="onSubmit()" class="form__container">
+    <mat-form-field appearance="fill">
+        <mat-label>Введите ваш email</mat-label>
+        <input matInput placeholder="pat@example.com" [formControl]="email" required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Введите ваш пароль</mat-label>
+        <input [formControl]="password" required matInput [type]="hide ? 'password' : 'text'">
+    </mat-form-field>
+    <div>
+        <button mat-raised-button color="primary" type="submit" [disabled]="myForm.invalid" class="btn btn-default" value="Отправить">Войти</button>
+    </div>
+</form>

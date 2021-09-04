@@ -1,0 +1,26 @@
+<mat-tab-group>
+    <mat-tab label="Персональная"> 
+        <div class="level">
+            <span class="level__count">{{lvl[0].level}} Уровень</span>
+            <div class="level__progress-bar">
+                <div class="level__progress-bar--filled" [style]="{'width' : lvl[0].experience + '%'}"></div>
+            </div>
+        </div>    
+    </mat-tab>
+    <mat-tab label="Групповая"> 
+        <div class="level">
+            <span class="level__count">{{lvl[1].level}} Уровень</span>
+            <div class="level__progress-bar">
+                <div class="level__progress-bar--filled" [style]="{'width' : lvl[1].experience + '%'}"></div>
+            </div>
+        </div>    
+    </mat-tab>
+    <mat-tab label="Платформа"> 
+        <div class="level">
+            <span class="level__count">{{lvl[2].level}} Уровень</span>
+            <div class="level__progress-bar">
+                <div class="level__progress-bar--filled" [style]="{'width' : lvl[2].experience + '%'}"></div>
+            </div>
+        </div>    
+    </mat-tab>
+</mat-tab-group>
